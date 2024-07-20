@@ -86,30 +86,56 @@ class InventoryClickListener : Listener{
                     if(sender !is Player) return
                     val inventory = Bukkit.createInventory(sender, 36, Component.text("Create New Kit").color(TextColor.color(0, 255, 75)))
 
-                    val equipArmourLeatherArmor = ItemStack(Material.LEATHER_CHESTPLATE)
-                    val equipArmourLeatherArmorMeta = equipArmourLeatherArmor.itemMeta
-                    equipArmourLeatherArmorMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
-                    equipArmourLeatherArmor.itemMeta = equipArmourLeatherArmorMeta
+                    // creates Leather armour
+                    val equipArmourLeatherHelmet = ItemStack(Material.LEATHER_HELMET)
+                    val equipArmourLeatherHelmetMeta = equipArmourLeatherHelmet.itemMeta
+                    equipArmourLeatherHelmetMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourLeatherHelmet.itemMeta = equipArmourLeatherHelmetMeta
+
+                    val equipArmourLeatherChestplate = ItemStack(Material.LEATHER_CHESTPLATE)
+                    val equipArmourLeatherChestplateMeta = equipArmourLeatherChestplate.itemMeta
+                    equipArmourLeatherChestplateMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourLeatherChestplate.itemMeta = equipArmourLeatherChestplateMeta
 
                     // creates Chainmail armour
+                    val equipArmourChainmailHelmet = ItemStack(Material.CHAINMAIL_HELMET)
+                    val equipArmourChainmailHelmetHelmetMeta = equipArmourChainmailHelmet.itemMeta
+                    equipArmourChainmailHelmetHelmetMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourChainmailHelmet.itemMeta = equipArmourChainmailHelmetHelmetMeta
+
                     val equipArmourChainMailArmor = ItemStack(Material.CHAINMAIL_CHESTPLATE)
                     val equipArmourChainMailArmorMeta = equipArmourChainMailArmor.itemMeta
                     equipArmourChainMailArmorMeta.displayName(Component.text("Equip ChainMail Armour Kit").color(TextColor.color(0, 180, 255)))
                     equipArmourChainMailArmor.itemMeta = equipArmourChainMailArmorMeta
 
                     // creates Iron armour
+                    val equipArmourIronHelmet = ItemStack(Material.IRON_HELMET)
+                    val equipArmourIronHelmetMeta = equipArmourIronHelmet.itemMeta
+                    equipArmourIronHelmetMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourIronHelmet.itemMeta = equipArmourIronHelmetMeta
+
                     val equipArmourIronArmor = ItemStack(Material.IRON_CHESTPLATE)
                     val equipArmourIronArmorMeta = equipArmourIronArmor.itemMeta
                     equipArmourIronArmorMeta.displayName(Component.text("Equip Iron Armour Kit").color(TextColor.color(0, 180, 255)))
                     equipArmourIronArmor.itemMeta = equipArmourIronArmorMeta
 
                     // creates Gold armour
+                    val equipArmourGoldHelmet = ItemStack(Material.GOLDEN_HELMET)
+                    val equipArmourGoldHelmetMeta = equipArmourGoldHelmet.itemMeta
+                    equipArmourGoldHelmetMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourGoldHelmet.itemMeta = equipArmourGoldHelmetMeta
+
                     val equipArmourGoldArmor = ItemStack(Material.GOLDEN_CHESTPLATE)
                     val equipArmourGoldArmorMeta = equipArmourGoldArmor.itemMeta
                     equipArmourGoldArmorMeta.displayName(Component.text("Equip Gold Armour Kit").color(TextColor.color(0, 180, 255)))
                     equipArmourGoldArmor.itemMeta = equipArmourGoldArmorMeta
 
                     // creates Diamond armour
+                    val equipArmourDiamondHelmet = ItemStack(Material.DIAMOND_HELMET)
+                    val equipArmourDiamondHelmetMeta = equipArmourDiamondHelmet.itemMeta
+                    equipArmourDiamondHelmetMeta.displayName(Component.text("Equip Leather Armour Kit").color(TextColor.color(0, 180, 255)))
+                    equipArmourDiamondHelmet.itemMeta = equipArmourDiamondHelmetMeta
+
                     val equipArmourDiamond = ItemStack(Material.DIAMOND_CHESTPLATE)
                     val equipArmourDiamondMeta = equipArmourDiamond.itemMeta
                     equipArmourDiamondMeta.displayName(Component.text("Equip Diamond Armour Kit").color(TextColor.color(0, 180, 255)))
@@ -133,11 +159,29 @@ class InventoryClickListener : Listener{
                     seperatorButtonMeta.displayName(Component.text("Close").color(TextColor.color(255, 0, 0)))
                     seperatorButton.itemMeta = seperatorButtonMeta
 
-                    // Armours
-                    inventory.setItem(0, )
-                    inventory.setItem(1, seperatorButton)
+                    // Leather Armor
+                    inventory.setItem(0, equipArmourLeatherHelmet)
+                    inventory.setItem(1, equipArmourLeatherChestplate)
                     inventory.setItem(2, seperatorButton)
                     inventory.setItem(3, seperatorButton)
+
+                    // Iron Armor
+                    inventory.setItem(9,  equipArmourIronHelmet)
+                    inventory.setItem(10, equipArmourIronArmor)
+                    inventory.setItem(11, seperatorButton)
+                    inventory.setItem(12, seperatorButton)
+
+                    // Gold Armor
+                    inventory.setItem(18, equipArmourGoldHelmet)
+                    inventory.setItem(19, equipArmourGoldArmor)
+                    inventory.setItem(20, seperatorButton)
+                    inventory.setItem(21, seperatorButton)
+
+                    // Diamond Armor
+                    inventory.setItem(27, equipArmourDiamondHelmet)
+                    inventory.setItem(28, equipArmourDiamond)
+                    inventory.setItem(29, seperatorButton)
+                    inventory.setItem(30, seperatorButton)
 
                     // Black Stained Glass Pane
                     inventory.setItem(4, seperatorButton)
