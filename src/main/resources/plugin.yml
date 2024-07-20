@@ -1,0 +1,17 @@
+name: VsCustomKitsPlugin
+version: '1.0-SNAPSHOT'
+main: me.viann.vsCustomKitsPlugin.VsCustomKitsPlugin
+api-version: '1.20'
+commands:
+  kits:
+    description: "This command opens the kits GUI"
+    usage: /<command>
+  kit-create:
+    description: "This commands allows you to create a kit"
+    usage: /<command>
+  get-data:
+    description: "This command gets data input from the player"
+    usage: /<command> <data>
+  show-data:
+    description: "This commands shows stored data to player"
+    usage: /<command>
