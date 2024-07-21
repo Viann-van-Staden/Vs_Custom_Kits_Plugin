@@ -20,7 +20,7 @@ class VsCustomKitsPlugin : JavaPlugin() {
 
     companion object {
 
-        public val guiMap: MutableMap<UUID, Inventory> = mutableMapOf()
+        val guiMap: MutableMap<UUID, Inventory> = mutableMapOf()
     }
 
     override fun onEnable() {
